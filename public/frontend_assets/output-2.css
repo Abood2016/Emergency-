@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+section
+{
+    position: relative;
+    font-family: sans-serif;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+ 
+}
+h1
+{
+    position: relative;
+    color: #ffffff;
+    text-align: left;
+    width: 7%;
+    font-size: 3.8rem;
+    margin: 0.4em 0.5em;
+}
+.back::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(imgs/img.jpeg );
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.box
+{
+    width: 30%;
+    height: 50%;
+    background: #fff;
+    position: relative;
+    margin-left: 12%;
+    margin-top: 3%;
+    border-radius: 30px;
+    padding: 1px 0 0 20px;
+}
+
+h2
+{
+    color: #70cfd5;
+}
+
+
+img
+{
+    width: 170px;
+    height:170px;
+    float: left;
+}
+.txtbox
+{
+    position: relative;
+    margin: 11% 45%;
+    width: 50%;
+}
+.txtbox p
+{
+    color: #8c8c8c;
+    opacity: 0.5;
+}
+.icons
+{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 15%;
+}
+.icons img
+{
+    width: 40px;
+    height: 40px;
+}
+
+
+header {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+  
+  }
+  
+  header img {
+  
+    position: fixed;
+    top: 8px;
+    right: 13px;
+    width: 8%;
+    height: 15%;
+    z-index: 1;
+    filter: drop-shadow(2px 6px 5px rgb(23, 139, 155));
+  
+  }
+  
+  header button {
+    position: absolute;
+    top: 5%;
+    right: 12%;
+    z-index: 1;
+    border: 0;
+    border-radius: 50px;
+    padding: 0.85rem 1.95rem;
+    font-size: 1rem;
+    background: #4b71ff;
+    color: #fff;
+    box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 25%);
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+  }
+  header button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 1.5rem rgb(0 0 0 / 25%);
+  }
+  @media(max-width:1450px) {
+    header img {
+      width: 8%;
+      height: 12%;
+    }
+  }
+  
+  @media(max-width:1050px) {
+    header img {
+      width: 8%;
+      height: 10%;
+    }
+  }
+  
+  @media(max-height:650px) {
+    header img {
+      width: 8%;
+      height: 15%;
+    }
+  }

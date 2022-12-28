@@ -1,0 +1,213 @@
+::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+  background: #7bd3dd
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0c9bd5;
+  border-radius: 15px;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+section {
+  position: relative;
+  font-family: sans-serif;
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+label {
+  position: relative;
+  padding: 1em;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 9%;
+  margin-top: 4%;
+}
+
+
+input {
+
+  padding: 7px 40px 7px 12px;
+  width: 29%;
+  border: 1px solid #E8EAED;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 1px 3px -2px #9098a9;
+  font-family: inherit;
+  font-size: 16px;
+  margin: 0px 0px 5px 0;
+  text-align: center;
+  color: #6d6d6d;
+}
+
+select {
+  -webkit-appearance: none;
+  padding: 7px 40px 7px 12px;
+  width: 33.5%;
+  border: 1px solid #E8EAED;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 1px 3px -2px #9098a9;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  transition: all 150ms ease;
+ color: #6d6d6d;
+}
+
+select:required:invalid {
+  color: #5A667F;
+
+}
+
+label select:focus,
+label input:focus {
+  outline: none;
+  border-color: #07f;
+  box-shadow: 0 0 0 2px rgb(0 119 255 / 20%);
+
+}
+option 
+{
+  color: #787a80;
+}
+
+option[value=""][disabled] {
+  display: none;
+}
+
+h2 {
+  color: #e8e8e8;
+  position: relative;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.back::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(back.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+h1 {
+  position: relative;
+  color: #fff;
+  text-align: left;
+  width: 7%;
+  font-size: 3.8rem;
+  margin: 0.4em 0.5em;
+}
+
+input::placeholder {
+  color: #bbb9b9;
+}
+
+.logo {
+  position: relative;
+  width: 35%;
+  margin-left: -5px;
+  margin-top: 0;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+
+}
+@media(min-height:690px){
+  label
+  {
+    margin-top: 5%;
+  }
+  select{
+    width: 32.8%;
+  }
+}
+@media(min-height:700px){
+  label
+  {
+    margin-top: 7%;
+  }
+ 
+}
+
+
+header {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+
+}
+
+header img {
+
+  position: fixed;
+  top: 8px;
+  right: 13px;
+  width: 8%;
+  height: 15%;
+  z-index: 1;
+  filter: drop-shadow(2px 6px 5px rgb(23, 139, 155));
+
+}
+
+header button {
+  position: absolute;
+  top: 5%;
+  right: 12%;
+  z-index: 1;
+  border: 0;
+  border-radius: 50px;
+  padding: 0.85rem 1.95rem;
+  font-size: 1rem;
+  background: #4b71ff;
+  color: #fff;
+  box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 25%);
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+header button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 1.5rem rgb(0 0 0 / 25%);
+}
+@media(max-width:1450px) {
+  header img {
+    width: 8%;
+    height: 12%;
+  }
+}
+
+@media(max-width:1050px) {
+  header img {
+    width: 8%;
+    height: 10%;
+  }
+}
+
+@media(max-height:650px) {
+  header img {
+    width: 8%;
+    height: 15%;
+  }
+}
