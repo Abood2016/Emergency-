@@ -27,6 +27,8 @@
                 <input type="password" autocomplete="new-password" name="password" placeholder="Enter Password">
             </div>
             <button class="btn" type="submit" value="Log in">Log in</button>
+            <br>
+            <div style="text-align: center;"><a href="" style="text-decoration: none;color: #70cfd5">No have account ?</a></div>
         </form>
     </section>
 </body>

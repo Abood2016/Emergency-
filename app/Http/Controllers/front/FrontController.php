@@ -41,6 +41,8 @@ class FrontController extends Controller
         return view('front.output2');
     }
 
+    
+
 
     public function appoinment(Request $request)
     {
@@ -50,4 +52,7 @@ class FrontController extends Controller
        ]);
        return redirect()->back()->with('success', 'Message Sent Successfully');
     }
+
+
+    
 }

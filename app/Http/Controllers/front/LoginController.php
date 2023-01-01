@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\front;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -34,6 +36,35 @@ class LoginController extends Controller
                 'message' => 'User or Password is Wrong !'
             ]);
         }
+        return redirect()->route('front.index');
+    }
+
+
+    public function register()
+    {
+        return view('front.auth.register');
+    }
+
+    public function registerForm(Request $request)
+    {
+        $request->validate([
+            'username' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+        $user =  User::create([
+            'username' => $request['username'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
+        return redirect()->route('patient.login');
+    }
+
+
+    public function logout(Request $request)
+    {
+        // dd($request->all());
+        auth()->logout();
         return redirect()->route('front.index');
     }
 }

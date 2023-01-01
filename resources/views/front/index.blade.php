@@ -10,7 +10,14 @@
     <!-- **********************new edit********************************** -->
     <header>
         <img src="{{ asset('frontend_assets/MainLogo.png') }}" alt="">
-        <button>Log out</button>
+        @if (auth()->check())
+            {{-- <button>{{ auth()->user()->username }}</button> --}}
+            <form id="logout-form" action="{{ route('user.logout') }}" method="POST">
+                @csrf
+                <button type="submit">Log out</button>
+            </form>
+        @else
+        @endif
     </header>
     <!-- **********************new edit********************************** -->
 

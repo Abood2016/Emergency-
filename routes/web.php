@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\AppoinmentController;
 use App\Http\Controllers\admin\dashboardController;
 use App\Http\Controllers\admin\LoginController;
+use App\Http\Controllers\admin\UsersController;
 use App\Http\Controllers\Front\FrontController;
 use App\Http\Controllers\front\LoginController as FrontLoginController;
 use Illuminate\Support\Facades\Route;
@@ -37,6 +38,9 @@ Route::group(
             Route::get('appoinments', [AppoinmentController::class, 'index'])->name('appoinments.index');
             Route::delete('appoinments-delete/{id}', [AppoinmentController::class, 'delete'])->name('appoinments.delete');
            
+            Route::get('patients', [UsersController::class, 'index'])->name('users.index');
+
+
         });
     }
 );
@@ -53,6 +57,15 @@ Route::post('/select-sympotom', [FrontController::class, 'sympotomForm'])->name(
 Route::get('/need-doctor', [FrontController::class, 'ISNeed'])->name('need.doctor');
 Route::get('/no-need-doctor', [FrontController::class, 'NoNeed'])->name('NoNeed.doctor');
 Route::post('/appoinment', [FrontController::class, 'appoinment'])->name('appoinment');
+Route::get('/patient-register', [FrontLoginController::class, 'register'])->name('patient.register');
+Route::post('/patient-register', [FrontLoginController::class, 'registerForm'])->name('patient.register.form');
+
+
+
+
+
+
+Route::post('/user-logout', [FrontLoginController::class, 'logout'])->name('user.logout');
 
 
 
